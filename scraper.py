@@ -1,10 +1,13 @@
 import requests
 import scraperwiki
+import BeautifulSoup
 
 scraperwiki.sqlite.save(unique_keys=['name'], data={"name": "susan", "occupation": "software developer"})
 
-r = requests.get('http://www.chadskelton.com/')
+html = requests.get('http://www.chadskelton.com/')
 
-print r
+htmlpage = html.content
 
-print(r.text)
+soup = BeautifulSoup(htmlpage)
+
+print soup
