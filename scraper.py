@@ -5,4 +5,4 @@ scraperwiki.sqlite.save(unique_keys=['name'], data={"name": "susan", "occupation
 
 r = requests.get('http://www.chadskelton.com/')
 
-print(r.text)
+print(r.content.text)
