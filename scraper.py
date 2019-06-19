@@ -8,6 +8,8 @@ html = requests.get('http://www.chadskelton.com/')
 
 htmlpage = html.content
 
+print htmlpage
+
 soup = BeautifulSoup(htmlpage)
 
 print soup
